@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'); /*Link import de la fuente: Montserrat*/
+/*Atención: No mover el import*/
+
+/*Características generales*/
+
+*{
+  list-style: none;
+  text-decoration: none;
+}
+
+/*Establecemos el color defondo, el tamaño de la fuente y la fuente de la letra*/
+ body {
+    background-color:#ece3d2;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    
+ }
+  
+  #principal{
+      width: 300px;
+      height: 300px;
+      text-align: center;
+  }
+
+
+/*Header*/
+@media screen and (max-width:480px){ /*Hacemos que el header sea responsive y se ajuste a pantallas menores a 480 px*/
+  /*Hacemos que la pagina se alinee al centro de la pantalla para una mejor organización para el usuario*/
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9d6b4;
+  }
+
+  .logo{ /*Establecemos el tamaño que queremos en el logo*/         
+    display: flex;
+    width: 50%;
+  }
+
+  .indice{ /*El listado de la barra del buscador la establecemos una al lado de otra y con una separacion de 8px*/
+    list-style:none;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+
+  }
+
+  .indice li a{
+    text-decoration: none;
+    color: #b11212;
+  }
+
+  .indice li a:hover{ /*Creamos un hover sobre el listado para que resalte la seleccion*/
+    color: red;
+  }
+  
+  #principal{
+      width: 300px;
+      height: 300px;
+      text-align: center;
+  }
+
+  main{ /*Establecemos el tamaño y la posicion de las imagenes y los videos del main*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  main img{
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+  }
+
+  div.video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .sushi{
+    width: 300px;
+    gap: 10px;
+    
+  }
+}
+
+@media screen and (min-width: 481px) { /*Ajustamos el responsive para pantallas mayores a 481px*/
+  /*Hacemos que la página se mueva en un lado, menos el header, para que las imagenes y los videos se alineen una al lado de otra, con una pequeña separación entre ellos*/
+  header{
+    display: flex;  /*Usamos display flex para alinear el contenido de las cajas*/
+    flex-direction: column;  /*Usamos flex para definir el posicionamient de las cajas*/
+    align-items: center;
+    background-color: #e9d6b4;
+  }
+
+  .logo{
+    display: flex;
+    width: 30%;
+    margin-top: 100px;
+  }
+
+  .indice{
+    list-style:none;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+
+  }
+
+  .indice li a{
+    text-decoration: none;
+    color: #b11212;
+  }
+
+  .indice li a:hover{
+    color: red;
+  }
+  
+  #principal{
+      width: 300px;
+      height: 300px;
+      text-align: center;
+  }
+
+
+  main img{
+    width: 300px;
+    height: 300px;
+  }
+
+  .sushi{
+    width: 300px;
+    gap: 10px;
+    
+  }
+} 
+
+/*Header Carta*/
+
+.carta-header{ /*Creamos la estructura del header de la carta, empezamos con el header añadiendo un banner*/
+  background-image:
+  url(Reservas/banner-reservas.jpg);
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+  color: #e5e5e5;
+}
+
+section{ /*Aplicamos el tamaño y como queremos que se posicione*/
+  min-width: 1000px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.carta-header-section h2{
+  font-size: 44px;
+  text-align: center;
+}
+
+.header-content{
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.header-content-carta p{
+  color: white;
+  text-align: center;
+}
+
+/*Responsive header*/
+
+/* Estilos para pantallas más pequeñas (dispositivos móviles) */
+@media screen and (min-width: 200px) {
+  .carta-header {
+    background-image:
+    url(Reservas/banner-reservas.jpg);
+    min-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #e5e5e5;
+  }
+
+  section {
+    min-width: auto; /* Elimina el ancho mínimo para que se ajuste al tamaño de la pantalla */
+    padding: 15px 0; /* Reduce el espacio interno */
+  }
+
+  .carta-header-section h2 {
+    font-size: 36px; /* Reduce el tamaño de la fuente para pantallas más pequeñas */
+  }
+}
+
+/* Estilos para pantallas más grandes (tabletas y escritorios) */
+@media screen and (min-width: 768px) {
+  .carta-header {
+    
+    height: 350px; /* Restaura la altura original para pantallas más grandes */
+  }
+
+  section {
+    min-width: 1000px; /* Restaura el ancho mínimo para pantallas más grandes */
+    padding: 30px 0; /* Restaura el espacio interno original */
+  }
+
+  .carta-header-section h2 {
+    font-size: 44px; /* Restaura el tamaño original de la fuente */
+  }
+}
+
+/*Estilos de la carta*/
+
+main.carta{
+  margin-left: 5px; /*Establecemos los margenes*/
+  margin-right: 5px;
+}
+
+h1{
+  text-align: center; /*Definimos los titulos*/
+  font-size: 44px;
+}
+
+.wrap{
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.colum-2.carta{
+  display: block;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 1rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.plato-carta{
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e5e5; 
+  border-radius: 6px;
+}
+
+.Plato-pieza{
+  font-weight: bold;
+}
+
+.img-plato-carta{
+  display: flex; 
+  flex-basis: 25%;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+}
+ 
+.img-plato-carta img{
+  max-width: 100;
+  max-height: 75px;
+}
+
+/*Ajuste de la medida de imágenes*/
+#Edamame{
+  width: 120px;
+  height: 70px;
+}
+
+#Gyoza{
+  width: 120px;
+  height: 70px;
+}
+
+#Sake{
+  width: 130px;
+  height: 120px;
+}
+
+#Maguro{
+  width: 120px;
+  height: 120px;
+}
+
+#Tamago{
+  width: 120px;
+  height: 70px;
+}
+
+#California{
+  width: 110px;
+  height: 70px;
+}
+
+#Spicy{
+  width: 130px;
+  height: 80px;
+}
+
+#Dragon{
+  width: 90px;
+  height: 60px;
+}
+
+#Ebi{
+  width: 100px;
+  height: 90px;
+}
+
+#Sashimi{
+  width: 100px;
+  height: 90px;
+}
+#Vegetarian{
+  width: 120px;
+  height: 70px;
+}
+
+#Yakitori{
+  width: 100px;
+  height: 100px;
+}
+
+#Tempura{
+  width: 100px;
+  height: 100px;
+}
+
+#Mochi{
+  width: 100px;
+  height: 100px; 
+}
+
+#Matcha{
+  width: 100px;
+  height: 80px;
+}
+
+#Sake{
+  width: 110px;
+  height: 80px;
+}
+
+#Te{
+  width: 100px;
+  height: 80px;
+}
+
+#Sodas{
+  width: 100px;
+  height: 80px;
+}
+
+.title-plato-carta{
+  border: 1px solid #e5e5e5;
+  border-bottom: none;
+  border-top: none;
+  flex-basis: 60%;
+  padding: 0 1rem;
+}
+
+.precio-plato-carta{
+  display: flex; 
+  flex-basis: 15%;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/*Responsive para la carta*/ 
+
+/*Medida para Smarthphone, creamos 3 medidas, para teléfono, tablets y escritorio*/
+@media screen and (min-width: 200px){
+  .colum-2.carta{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media screen and (min-width: 767px){
+  .colum-2.carta{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  main.carta{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+
+
+/*Reservas*/ 
+
+/*Header Reservas*/
+
+.reserva-header{ /*Tambien usamos un banner en reservas*/
+  background-image: url(Reservas/imagenes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  height: 350px;
+}
+
+.reserva-header-section{
+  min-width: 100%;
+  margin: auto;
+  padding: 30px 0;
+  background-image: url(Reservas/imagenes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.reserva-header-section h2{
+  font-size: 44px;
+  text-align: center;
+}
+
+.header-content{
+  text-align: center;
+
+}
+
+.header-content p{
+  color: black;
+}
+
+
+/*Estilos de reservas*/
+
+.wrap-reserva{
+ display: block;
+}
+
+.wrap-reservas p{
+  font-size: 13px;
+}
+
+.reservas-informacion{
+  padding-bottom: .5rem;
+}
+
+.horarios-informacion{
+  padding-bottom: .5rem;
+  line-height: 40%;
+}
+
+.mail-informacion{
+  padding-bottom: .5rem;
+}
+
+#ubicación{
+  padding: 5px 0;
+}
+
+.destacable{
+  font-weight: 600;
+  color: rgb(148, 106, 22);
+  font-size: 14px;
+}
+
+#text-bold{
+  font-weight: 600;
+}
+
+/*Responsive Reserva*/
+
+/* Estilos para pantallas más pequeñas (dispositivos móviles) */
+@media screen and (max-width: 767px) {
+  .reserva-header {
+    height: 250px; /* Ajusta la altura para pantallas más pequeñas */
+    min-width: 100%;
+  }
+
+  .reserva-header-section {
+    min-width: 100%; /* Elimina el ancho mínimo para que se ajuste al tamaño de la pantalla */
+    padding: 15px 0; /* Reduce el espacio interno */
+  }
+
+  .reserva-header-section h2 {
+    font-size: 36px; /* Reduce el tamaño de la fuente para pantallas más pequeñas */
+  }
+}
+
+/* Estilos para pantallas más grandes (tabletas y escritorios) */
+@media screen and (min-width: 768px) {
+  .reserva-header {
+    height: 350px; /* Restaura la altura original para pantallas más grandes */
+    min-width: 100%;
+  }
+
+  .reserva-header-section {
+    min-width: 1000px; /* Restaura el ancho mínimo para pantallas más grandes */
+    padding: 30px 0; /* Restaura el espacio interno original */
+  }
+
+  .reserva-header-section h2 {
+    font-size: 44px; /* Restaura el tamaño original de la fuente */
+  }
+}
+
+/*Footer*/
+
+   footer{
+    background-color: #d56e6e;
+    color: #222;
+  }
+
+  footer ul{
+    padding: 0; 
+  }
+
+  footer li{  
+    list-style: none;
+  }
+
+  .wrap-footer{ /*Aquí ponemos la distribución de columnas*/
+    display: grid;
+    grid-template-columns: 30% 15% 
+    15% 20%;
+    column-gap: 5%;
+    padding: 1rem;
+    margin: 2rem auto; 
+    max-width: 1200px;
+    margin-top: auto; 
+  }
+
+  .element-footer h5{
+    margin: 1rem 0;
+  }
+
+  .text-element-footer li{ 
+    line-height: 2;  
+  }
+
+  .text-element-footer li a{ 
+    color: #222;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .social-element-footer a { /*Estilos de iconos para reder sociales*/
+    display: inline-block; 
+    min-height: 40px;
+    width: 40px; 
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center; 
+    line-height: 40px;
+    border-radius: 50%;
+    color: rgba(4, 0, 0, 0.838); 
+}
+
+.social-element-footer a:hover{ /*Hoover para redes*/
+    background-color: #0e01028a;
+}
+
+.footer-creds{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color: #576171;
+    font-size: .9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.legal-creds ul{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.legal-creds ul li{
+  padding-right: 1rem;
+}
+
+
+.legal-creds li a{
+  list-style: none;
+  text-decoration: none;
+  color: #576171;
+  font-size: .9rem;
+  margin-right: .5rem;
+  
+}
+
+/*Modificaciones del span en el apartado "Sobre nosostros*/
+
+.texto{
+  font-weight: 300 ;
+}
+
+.Bienvenido{
+  font-weight: 600;
+}
+
+
+/*Responsive Footer*/
+
+/*Medida para Smarthphones*/
+@media screen and (max-width: 767px) { /*Se muestran dos columnas si la pantalla es inferior a 768px*/
+  .wrap-footer{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width:480px){ /*Se muestra 1 columna*/
+  .wrap-footer{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width:320px){ /*Se muestran los datos en forma de columna*/
+  .footer-creds{
+    flex-flow: column;
+  }
+}
+
+@media screen and (max-width: 767px){
+  h1{
+    font-size: 32px;
+  }
+}
+
+
+
+ 
+ 
+
+
+ 
+
+
+
