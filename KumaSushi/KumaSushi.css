@@ -464,6 +464,32 @@ h1{
   font-weight: 600;
 }
 
+.map-responsive{ /*Prueba del maps*/
+
+  overflow:hidden;
+
+  padding-bottom:56.25%;
+
+  position:relative;
+
+  height:0;
+
+}
+
+.map-responsive iframe{
+
+  left:0;
+
+  top:0;
+
+  height:50%;
+
+  width:50%;
+
+  position:absolute;
+
+}
+
 /*Responsive Reserva*/
 
 /* Estilos para pantallas más pequeñas (dispositivos móviles) */
@@ -621,6 +647,7 @@ h1{
     font-size: 32px;
   }
 }
+
 
 
 
