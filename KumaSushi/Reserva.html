@@ -30,12 +30,59 @@
     <!--En el main creamos todo el contenido principal de la página, en este caso que parezca que es para poder reservar una mesa-->
     <main>
         <div class="wrap-reservas">
-           <div class="reservas-informacion">
-                <h3>Información reservas</h3>
-                <p>Para realizar una reserva comunicarse a los siguientes números:  </p>
-                <p>Télefono de contacto: <span class="destacable">(+34) 900 01 02 03</span></p>
-                <p>Whatsapp: <span class="destacable">(+34) 600 22 33 44</span></p>
-           </div> 
+            <div class="reservas-informacion">
+                 <h2>Información reservas</h2>
+                 <!--<p>Para realizar una reserva comunicarse a los siguientes números:  </p>
+                 <p>Télefono de contacto: <span class="destacable">(+34) 900 01 02 03</span></p>
+                 <p>Whatsapp: <span class="destacable">(+34) 600 22 33 44</span></p>-->
+                 <form action="#" class="form-reserva">
+ 
+                     <div class = "segment">
+                         <h3>Datos de Reserva</h3>
+                     </div>
+ 
+                     <label>
+                         <input type="text" placeholder="Nombre"/>
+                     </label>
+                     <label>
+                         <input type="text" placeholder="Apellido"> 
+                     </label>
+                     <label>
+                         <input type="email" placeholder="Correo Electrónico">
+                     </label>
+                     <label>
+                         <input type="tel" placeholder="Núm. Teléf"> 
+                     </label>
+ 
+                     <label class="content-select">
+                         <h3>Cantidad de personas</h3>
+                         <select name="NumPers" id="NumPers">
+                             <option value="1">1</option>
+                             <option value="2">2</option>
+                             <option value="3">3</option>
+                             <option value="4">4</option>
+                             <option value="5">5</option>
+                             <option value="6">6</option>
+                             <option value="7">7</option>
+                             <option value="8">8</option>
+                         </select>
+                     </label>
+                     <label class="content-select">
+                         <h3>Hora de reserva</h3>
+                         <select name="Horario" id="Horario">
+                             <option value="12">12h</option>
+                             <option value="12">13h</option>
+                             <option value="12">14h</option>
+ 
+                             <option value="12">18h</option>
+                             <option value="12">19h</option>
+                             <option value="12">20h</option>
+                             <option value="12">21h</option>
+                         </select>
+                     </label>
+                     <button class="red" type="button"><i class= "icon ion-md-lock"></i>Solicitar Reserva</button>
+                 </form>
+            </div> 
 
            <div class="horarios-informacion">
                 <h3>Horarios</h3>
