@@ -426,6 +426,87 @@ h1{
   color: black;
 }
 
+/*Form Reservas*/
+
+
+form{
+  padding: 16px;
+  width: 16px*20;
+  margin: 0 auto;
+}
+
+#TitForm{
+  color: red;
+}
+
+.segment {
+  padding: 16px*2 0;
+  text-align: center;
+}
+
+button, input{
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 16px*20;
+  padding: 16px;
+  background-color: #F0ede9;
+  text-shadow: 1px 1px 0 #FFF;
+}
+
+label{
+  display: block;
+  margin-bottom: 16px*1.5;
+  width: 100%;
+
+}
+
+input{
+  margin-right: 16px/2;
+  box-shadow: inset 2px 2px 5px #CCC6BE, inset -5px -5px 10px #FFF;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:focus{
+    box-shadow: inset 1px 1px 2px #CCC6BE, inset -1px -1px 2px #FFF;
+  }
+}
+
+button{
+  color: #6B6359;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #CCC6BE;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover{
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #CCC6BE;
+  }
+
+  &:active{
+    box-shadow: inset 1px 1px 2px #CCC6BE, inset -1px -1px 2px #FFF;
+  }
+
+  &.red{
+    display:block;
+    width: 100%;
+    color: red;
+  }
+}
+
+.content-select select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 16px;
+  padding:8px;
+  box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #CCC6BE;
+  font-weight: bold;
+}
 
 /*Estilos de reservas*/
 

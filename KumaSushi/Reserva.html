@@ -35,23 +35,23 @@
                  <!--<p>Para realizar una reserva comunicarse a los siguientes números:  </p>
                  <p>Télefono de contacto: <span class="destacable">(+34) 900 01 02 03</span></p>
                  <p>Whatsapp: <span class="destacable">(+34) 600 22 33 44</span></p>-->
-                 <form action="#" class="form-reserva">
+                 <form action="#" class="form-reserva" onsubmit="validacion()">
  
                      <div class = "segment">
-                         <h3>Datos de Reserva</h3>
+                         <h3 id="TitForm">Datos de Reserva</h3>
                      </div>
  
                      <label>
-                         <input type="text" placeholder="Nombre"/>
+                         <input type="text" placeholder="Nombre" id="NameForm">
                      </label>
                      <label>
-                         <input type="text" placeholder="Apellido"> 
+                         <input type="text" placeholder="Apellido" id="SecondName"> 
                      </label>
                      <label>
-                         <input type="email" placeholder="Correo Electrónico">
+                         <input type="email" placeholder="Correo Electrónico" id="correo">
                      </label>
                      <label>
-                         <input type="tel" placeholder="Núm. Teléf"> 
+                         <input type="tel" placeholder="Núm. Teléf" id="NumTelf"> 
                      </label>
  
                      <label class="content-select">
@@ -192,6 +192,7 @@
                         </div>
                 </div>
             </div>
-    </footer>   
+    </footer>
+    <script src="valForm.js"></script>  
 </body>
 </html>
