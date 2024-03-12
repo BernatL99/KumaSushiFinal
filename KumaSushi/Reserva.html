@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
-    <link rel=StyleSheet href="KumaSushi.css">
+    <link rel=StyleSheet href="Reservas.css">
     <link rel=StyleSheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -35,22 +35,22 @@
                  <!--<p>Para realizar una reserva comunicarse a los siguientes números:  </p>
                  <p>Télefono de contacto: <span class="destacable">(+34) 900 01 02 03</span></p>
                  <p>Whatsapp: <span class="destacable">(+34) 600 22 33 44</span></p>-->
-                 <form action="#" class="form-reserva" onsubmit="validacion()">
+                 <form action="#" class="form-reserva" onsubmit="return validacion()">
  
                      <div class = "segment">
                          <h3 id="TitForm">Datos de Reserva</h3>
                      </div>
  
-                     <label>
+                     <label for="NameForm">
                          <input type="text" placeholder="Nombre" id="NameForm">
                      </label>
-                     <label>
-                         <input type="text" placeholder="Apellido" id="SecondName"> 
+                     <label for="apellidos">
+                         <input type="text" placeholder="Apellido" id="apellidos"> 
                      </label>
-                     <label>
+                     <label for="correo">
                          <input type="email" placeholder="Correo Electrónico" id="correo">
                      </label>
-                     <label>
+                     <label for="NumTelf">
                          <input type="tel" placeholder="Núm. Teléf" id="NumTelf"> 
                      </label>
  
@@ -80,7 +80,7 @@
                              <option value="12">21h</option>
                          </select>
                      </label>
-                     <button class="red" type="button"><i class= "icon ion-md-lock"></i>Solicitar Reserva</button>
+                     <input type="submit" class="red" type="button"><i class= "icon ion-md-lock"></i>Solicitar Reserva</button>
                  </form>
             </div> 
 
