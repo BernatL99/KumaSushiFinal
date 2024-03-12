@@ -163,8 +163,34 @@ input{
     box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #CCC6BE;
     font-weight: bold;
 }
+
+@media screen and (min-width: 200px){
+  .horarios-informacion{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  .mail-informacion{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ubicacion-informacion{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  .map-responsive{
+    display: block;
+    flex-direction:column;
+    align-items: center;
+  }
+}
   
-  /*Estilos de reservas*/
+  /*FOOTER*/
   
 .wrap-reserva{
    display: block;
