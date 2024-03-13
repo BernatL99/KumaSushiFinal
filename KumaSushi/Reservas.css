@@ -155,6 +155,7 @@ input{
 }
   
 .content-select select{
+    display: block;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -162,6 +163,8 @@ input{
     padding:8px;
     box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #CCC6BE;
     font-weight: bold;
+    width: 90%;
+    
 }
 
 @media screen and (min-width: 200px){
@@ -182,12 +185,19 @@ input{
     display: flex;
     flex-direction:column;
     align-items: center;
+    margin-bottom: 20px;
   }
-  .map-responsive{
-    display: block;
-    flex-direction:column;
+  .ubicacion-informacion iframe{
+    height: 80%;
+    width: 80%;
+  }
+
+  .content-select h3{
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
+    
 }
   
   /*FOOTER*/
