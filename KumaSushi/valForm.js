@@ -33,5 +33,26 @@ function ocultarHorarios(){
         ocuHor.style.display = "none";
         
     }
-    alert("prueba");
+}
+
+function ocultarCorreo(){
+    var ocuHor = document.getElementById("mails");
+    if(ocuHor.style.display == "none"){
+        ocuHor.style.display = "flex";
+    }
+    else{
+        ocuHor.style.display = "none";
+        
+    }
+}
+
+function ocultarDireccion(){
+    var ocuHor = document.getElementById("direccion");
+    if(ocuHor.style.display == "none"){
+        ocuHor.style.display = "flex";
+    }
+    else{
+        ocuHor.style.display = "none";
+        
+    }
 }
