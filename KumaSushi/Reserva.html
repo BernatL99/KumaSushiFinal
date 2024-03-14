@@ -80,12 +80,13 @@
                              <option value="12">21h</option>
                          </select>
                      </label>
-                     <input type="submit" class="red" type="button"><i class= "icon ion-md-lock"></i>Solicitar Reserva</button>
+                     <input type="submit" value="Enviar reserva" class="red"><!--<i class= "icon ion-md-lock"></i>-->
                  </form>
             </div> 
-
-           <div class="horarios-informacion">
-                <h3>Horarios</h3>
+            <div class="Button-Horario">
+                <button onclick="ocultarHorarios()">Horarios</button>
+            </div>
+            <div class="horarios-informacion" id="horario">
                 <h5>Horario semanal</h5>
                 <p>De 12:00h - 15:00h</p>
                 <p>Y de 18:00h - 22:00h</p>
@@ -97,7 +98,7 @@
                 <p>De 20:00h a 23:00h</p>
             </div>
 
-            <div class="mail-informacion">
+            <div class="mail-informacion" id="mails">
                 <h3>Correo electrónico</h3>
                 <p>Para sugerencias, eventos y consultas. Disponemos del siguiente correo electrónico para nuestros clientes:</p>
                 <a href="mailto:kumasushi@gmail.com" span class="destacable">kumasushi@gmail.com</span></a>

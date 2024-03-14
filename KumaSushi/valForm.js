@@ -1,14 +1,14 @@
 function validacion(){
-    var name = document.getElementById("NameForm");
-    var SecName = document.getElementById("apellidos");
-    var num = document.getElementById("NumTelf");
-    var mail = document.getElementById("correo");
+    var name = document.getElementById("NameForm").value;
+    var SecName = document.getElementById("apellidos").value;
+    var num = document.getElementById("NumTelf").value;
+    var mail = document.getElementById("correo").value;
     
-    if(!/^[A-Za-z]+/.test(name)){
+    if(!/\w{3,10}/.test(name)){
         alert("El nombre tiene que tener mínimo 3 carácteres");
         return false;
     }
-    if(!/^[A-Za-z ]+/.test(SecName)){
+    if(!/\w{6,20}/.test(SecName)){
         alert("El campo de apellido tiene que tener mínimo 3 carácteres");
         return false;
     }
@@ -22,4 +22,16 @@ function validacion(){
     }
     return true;
     
+}
+
+function ocultarHorarios(){
+    var ocuHor = document.getElementById("horario");
+    if(ocuHor.style.display == "none"){
+        ocuHor.style.display = "flex";
+    }
+    else{
+        ocuHor.style.display = "none";
+        
+    }
+    alert("prueba");
 }

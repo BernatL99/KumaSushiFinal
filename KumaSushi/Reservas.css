@@ -168,10 +168,30 @@ input{
 }
 
 @media screen and (min-width: 200px){
-  .horarios-informacion{
+
+  .content-select option{
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+
+  .content-select h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #horario{
     display: flex;
     flex-direction:column;
     align-items: center;
+    transition: all .7s;
+  }
+  .Button-Horario button{
+    width: 100%;
+  }
+
+  .Button-Mail button{
+    width: 100%;
   }
 
   .mail-informacion{
@@ -190,12 +210,6 @@ input{
   .ubicacion-informacion iframe{
     height: 80%;
     width: 80%;
-  }
-
-  .content-select h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
     
 }
