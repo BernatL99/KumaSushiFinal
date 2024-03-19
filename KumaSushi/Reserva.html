@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
-    <link rel=StyleSheet href="KumaSushi.css">
+    <link rel=StyleSheet href="Reservas.css">
     <link rel=StyleSheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -30,29 +30,28 @@
     <!--En el main creamos todo el contenido principal de la página, en este caso que parezca que es para poder reservar una mesa-->
     <main>
         <div class="wrap-reservas">
- ResponsiveMaps.css
             <div class="reservas-informacion">
                  <h2>Información reservas</h2>
                  <!--<p>Para realizar una reserva comunicarse a los siguientes números:  </p>
                  <p>Télefono de contacto: <span class="destacable">(+34) 900 01 02 03</span></p>
                  <p>Whatsapp: <span class="destacable">(+34) 600 22 33 44</span></p>-->
-                 <form action="#" class="form-reserva">
+                 <form action="#" class="form-reserva" onsubmit="return validacion()">
  
                      <div class = "segment">
-                         <h3>Datos de Reserva</h3>
+                         <h3 id="TitForm">Datos de Reserva</h3>
                      </div>
  
-                     <label>
-                         <input type="text" placeholder="Nombre"/>
+                     <label for="NameForm">
+                         <input type="text" placeholder="Nombre" id="NameForm">
                      </label>
-                     <label>
-                         <input type="text" placeholder="Apellido"> 
+                     <label for="apellidos">
+                         <input type="text" placeholder="Apellido" id="apellidos"> 
                      </label>
-                     <label>
-                         <input type="email" placeholder="Correo Electrónico">
+                     <label for="correo">
+                         <input type="email" placeholder="Correo Electrónico" id="correo">
                      </label>
-                     <label>
-                         <input type="tel" placeholder="Núm. Teléf"> 
+                     <label for="NumTelf">
+                         <input type="tel" placeholder="Núm. Teléf" id="NumTelf"> 
                      </label>
  
                      <label class="content-select">
@@ -81,12 +80,14 @@
                              <option value="12">21h</option>
                          </select>
                      </label>
-                     <button class="red" type="button"><i class= "icon ion-md-lock"></i>Solicitar Reserva</button>
+                     <input type="submit" value="Enviar reserva" class="red"><!--<i class= "icon ion-md-lock"></i>-->
                  </form>
             </div> 
-
-
-           <div class="horarios-informacion">
+                
+            <div class="Button-Horario">
+                <button onclick="ocultarHorarios()">Horario</button>
+            </div>
+           <div class="horarios-informacion" id="horario">
                 <h3>Horarios</h3>
                 <h5>Horario semanal</h5>
                 <p>De 12:00h - 15:00h</p>
@@ -99,17 +100,22 @@
                 <p>De 20:00h a 23:00h</p>
             </div>
 
-            <div class="mail-informacion">
+            <div class="Button-Mail">
+                <button onclick="ocultarCorreo()">Contacto</button>
+            </div>
+            <div class="mail-informacion" id="mails">
                 <h3>Correo electrónico</h3>
                 <p>Para sugerencias, eventos y consultas. Disponemos del siguiente correo electrónico para nuestros clientes:</p>
                 <a href="mailto:kumasushi@gmail.com" span class="destacable">kumasushi@gmail.com</span></a>
             </div> 
 
             <!--Añadimos la informacion de direccion-->
-           <div class="ubicacion-informacion">
+            <div class="Button-Dir">
+                <button onclick="ocultarDireccion()">Direccion</button>
+            </div>
+           <div class="ubicacion-informacion" id="direccion">
                 <h3>Ubicación</h3>
                 <p>Nos ubicamos en: <span id="text-bold">Carrer inesperat, 5 Son Riera.</span></p>
-            <div class="map-responsive"> <!--Añadimos maps responsive-->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1538.074241367363!2d2.715754171110497!3d39.55625942711918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129794150fda224f%3A0x7a661a73f64eedd0!2sSon%20Banya%2C%20Palma%2C%20Illes%20Balears!5e0!3m2!1ses!2ses!4v1709550942323!5m2!1ses!2ses" 
                 width="50" height="25" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -194,6 +200,7 @@
                         </div>
                 </div>
             </div>
-    </footer>   
+    </footer>
+    <script src="valForm.js"></script>  
 </body>
 </html>
